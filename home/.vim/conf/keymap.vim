@@ -34,9 +34,23 @@ if dein#tap('denite.nvim')
   nnoremap <silent><leader>R :<C-u>Denite register -buffer-name=register<CR>
   nnoremap <silent><leader>k :<C-u>Denite bookmark -buffer-name=bookmark<CR>
   nnoremap <silent><leader>o :<C-u>Denite outline -buffer-name=outline<CR>
+  if dein#tap('neomru.vim')
+    nnoremap <silent><leader>r :<C-u>Denite file_mru -buffer-name=file_mru<CR>
+  endif
 endif
-if dein#tap('neomru.vim')
-  nnoremap <silent><leader>r :<C-u>Denite file_mru -buffer-name=file_mru<CR>
+if dein#tap('unite.vim')
+  nnoremap <silent><leader>f :<C-u>Unite file -buffer-name=file<CR>
+  nnoremap <silent><leader>F :<C-u>Unite file -buffer-name=file -input=`expand('%:h')`/<CR>
+  nnoremap <silent><leader><space> :<C-u>Unite file_rec<CR>
+  nnoremap <silent><leader>b :<C-u>Unite buffer -buffer-name=buffer<CR>
+  nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
+  nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
+  if dein#tap('unite-outline')
+    nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
+  endif
+  if dein#tap('neomru.vim')
+    nnoremap <silent><leader>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
+  endif
 endif
 
 if dein#tap('neocomplete')
@@ -63,7 +77,6 @@ if dein#tap('neocomplete')
   "\<Space>"
 endif
 
-" neosnippet
 if dein#tap('neosnippet')
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
   smap <C-k>     <Plug>(neosnippet_expand_or_jump)
