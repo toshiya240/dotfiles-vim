@@ -24,4 +24,4 @@ on_ft = 'snippet'
 repo = 'sebastianmarkow/deoplete-rust'
 on_ft = ['rust']
 hook_add = 'execute "source " . g:dein_base_dir . "/rc/deoplete-rust.vim"'
-depends = 'deoplete'
+depends = 'deoplete.nvim'
