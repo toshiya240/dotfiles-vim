@@ -25,6 +25,14 @@ repo = 'mattn/emmet-vim'
 on_ft = ['html', 'markdown']
 
 [[plugins]]
+repo = 'tell-k/vim-autopep8'
+on_ft = ['python']
+
+[[plugins]]
+repo = 'davidhalter/jedi-vim'
+on_ft = ['python']
+
+[[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = ['rust']
 hook_add = 'execute "source " . g:dein_base_dir . "/rc/rust.vim"'

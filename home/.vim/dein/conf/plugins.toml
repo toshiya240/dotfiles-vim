@@ -43,6 +43,7 @@ repo = 'vim-scripts/Align'
 # devel
 [[plugins]]
 repo = 'scrooloose/syntastic'
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/syntastic.vim"'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
