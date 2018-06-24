@@ -1,3 +1,2 @@
-
 setl sw=2
-setl si
+setl ai
