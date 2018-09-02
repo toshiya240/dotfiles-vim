@@ -83,6 +83,7 @@ set cino=l1,g0,N-s,E-s,t0,i2s,+2s,u2s,U1,m1
 
 set history=100
 
+set mouse=a
 " mouse の動作を MS-Windows のようにする
 behave mswin
 
