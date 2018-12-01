@@ -14,8 +14,8 @@ let g:colors_name = "mycolor"
 hi NonText    ctermfg=red
 hi Comment    ctermfg=red        
 hi Constant   ctermfg=yellow        
-hi Special    ctermfg=darkmagenta    
-hi SpecialKey ctermfg=darkmagenta
+hi Special    ctermfg=magenta    
+hi SpecialKey ctermfg=magenta
 hi Identifier cterm=bold ctermfg=cyan 
 hi Statement  ctermfg=magenta 
 hi PreProc    ctermfg=magenta
