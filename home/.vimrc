@@ -79,7 +79,7 @@ set tabstop=4
 set textwidth=80
 set shiftwidth=4
 set cinkeys=0{,0},0),:,0#,!<Tab>,o,O,e
-set cino=l1,g0,N-s,E-s,t0,i2s,+2s,u2s,U1,m1
+set cino=:0,l1,g0,N-s,E-s,t0,i2s,+2s,u2s,U1,m1
 
 set history=100
 
