@@ -54,11 +54,7 @@ set listchars=eol:$,tab:>-
 set hlsearch
 
 " Insert モードでカーソル形状変更
-if exists('$TMUX')
-  let &t_SI = "\e[P\e\e[6 q\e\\"
-  let &t_EI = "\e[P\e\e[2 q\e\\"
-  let &t_SR = "\e[P\e\e[4 q\e\\"
-else
+if has('vim_starting')
   let &t_SI = "\e[6 q"
   let &t_EI = "\e[2 q"
   let &t_SR = "\e[4 q"
