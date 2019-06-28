@@ -35,7 +35,8 @@ augroup numberwidth
   autocmd BufEnter,WinEnter,BufWinEnter * let &l:numberwidth = len(line("$")) + 2
 augroup END
 set cursorline
-set ruler				" show the cursor position all the time
+autocmd InsertEnter * set nocursorline
+autocmd InsertLeave * set cursorline
 set showcmd				" display incomplete commands
 set laststatus=2		" show the status line all the time
 set showtabline=2
@@ -54,11 +55,13 @@ set hlsearch
 
 " Insert モードでカーソル形状変更
 if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  let &t_SI = "\e[P\e\e[6 q\e\\"
+  let &t_EI = "\e[P\e\e[2 q\e\\"
+  let &t_SR = "\e[P\e\e[4 q\e\\"
 else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  let &t_SI = "\e[6 q"
+  let &t_EI = "\e[2 q"
+  let &t_SR = "\e[4 q"
 endif
 
 "----------------------------------------------------------------------
