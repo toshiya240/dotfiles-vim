@@ -29,7 +29,7 @@ nnoremap <silent><leader>/ :grep <C-r><C-w><CR>
 if dein#tap('denite.nvim')
   nnoremap <silent><leader>f :<C-u>Denite file -buffer-name=file<CR>
   nnoremap <silent><leader>F :<C-u>Denite file -buffer-name=file -input=`expand('%:h')`/<CR>
-  nnoremap <silent><leader><space> :<C-u>Denite file_rec<CR>
+  nnoremap <silent><leader><space> :<C-u>Denite file/rec<CR>
   nnoremap <silent><leader>b :<C-u>Denite buffer -buffer-name=buffer<CR>
   nnoremap <silent><leader>R :<C-u>Denite register -buffer-name=register<CR>
   nnoremap <silent><leader>k :<C-u>Denite bookmark -buffer-name=bookmark<CR>
