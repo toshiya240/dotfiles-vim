@@ -51,7 +51,7 @@ set nowrap
 set display=lastline
 set linebreak
 set scrolloff=5
-set listchars=eol:$,tab:>-
+set listchars=tab:>-,space:.
 
 set hlsearch
 
