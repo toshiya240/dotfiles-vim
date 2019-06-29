@@ -17,20 +17,22 @@ hi DiffAdd    ctermbg=blue
 hi DiffChange ctermbg=darkgreen
 hi DiffDelete ctermbg=red
 hi DiffText   ctermbg=darkyellow
-hi Error      ctermbg=red        ctermfg=White
+hi Error      ctermfg=black      ctermbg=red        cterm=bold
 hi Function   ctermfg=cyan
 hi Identifier ctermfg=cyan       cterm=bold
 hi Ignore     ctermfg=grey
 hi LineNr     ctermfg=yellow     cterm=bold
-hi NonText    ctermfg=red
+hi NonText    ctermfg=grey
+hi Note       ctermfg=black      ctermbg=yellow     cterm=bold
 hi Operator   ctermfg=red
 hi PMenuSel   ctermfg=white      ctermbg=darkgreen  cterm=bold
 hi PreProc    ctermfg=magenta
 hi Repeat     ctermfg=magenta
+hi Search     ctermfg=black      ctermbg=green
 hi Special    ctermfg=magenta
 hi SpecialKey ctermfg=magenta
 hi Statement  ctermfg=magenta
-hi Todo       ctermbg=yellow     ctermfg=black
+hi Todo       ctermfg=black      ctermbg=yellow
 hi Type       ctermfg=cyan
 hi User1      ctermbg=blue       cterm=inverse,bold
 hi User2      ctermbg=magenta    cterm=inverse,bold
@@ -41,10 +43,10 @@ hi Constant     guifg=yellow
 hi Cursor       guifg=white      guibg=red
 hi CursorLine   guibg=white      gui=underline
 hi CursorLineNr guifg=black      guibg=Yellow
-hi Error        guifg=black      guibg=yellow     gui=bold
+hi Error        guifg=black      guibg=red        gui=bold
 hi Function     guifg=GoldenRod1
 hi Identifier   guifg=orchid
-hi Ignore       guifg=white
+hi Ignore       guifg=grey
 hi LineNr       guifg=black      guibg=khaki      gui=bold
 hi NonText      guifg=grey50     gui=none
 hi Note         guifg=black      guibg=yellow     gui=bold
