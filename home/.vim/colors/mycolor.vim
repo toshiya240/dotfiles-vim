@@ -10,57 +10,57 @@ if exists("syntax_on")
 endif
 let g:colors_name = "mycolor"
 " cterm
-"hi Normal     ctermfg=white ctermbg=black
-hi NonText    ctermfg=red
-hi Comment    ctermfg=red        
-hi Constant   ctermfg=yellow        
-hi Special    ctermfg=magenta    
-hi SpecialKey ctermfg=magenta
-hi Identifier cterm=bold ctermfg=cyan 
-hi Statement  ctermfg=magenta 
-hi PreProc    ctermfg=magenta
-hi Type       ctermfg=Cyan    
-hi Function   ctermfg=Cyan 
-hi Repeat     ctermfg=magenta
-hi Operator   ctermfg=Red            
-hi Ignore     ctermfg=grey
-hi Error      ctermbg=Red ctermfg=White 
-hi Todo       ctermbg=Yellow ctermfg=Black 
-hi User1      ctermbg=blue cterm=inverse,bold
-hi User2      ctermbg=magenta cterm=inverse,bold
-hi LineNr     ctermfg=yellow cterm=bold
-hi PMenuSel   ctermfg=white ctermbg=darkgreen cterm=bold
+" hi Normal     ctermfg=white      ctermbg=black
+hi Comment    ctermfg=red
+hi Constant   ctermfg=yellow
 hi DiffAdd    ctermbg=blue
 hi DiffChange ctermbg=darkgreen
 hi DiffDelete ctermbg=red
 hi DiffText   ctermbg=darkyellow
+hi Error      ctermbg=red        ctermfg=White
+hi Function   ctermfg=cyan
+hi Identifier ctermfg=cyan       cterm=bold
+hi Ignore     ctermfg=grey
+hi LineNr     ctermfg=yellow     cterm=bold
+hi NonText    ctermfg=red
+hi Operator   ctermfg=red
+hi PMenuSel   ctermfg=white      ctermbg=darkgreen  cterm=bold
+hi PreProc    ctermfg=magenta
+hi Repeat     ctermfg=magenta
+hi Special    ctermfg=magenta
+hi SpecialKey ctermfg=magenta
+hi Statement  ctermfg=magenta
+hi Todo       ctermbg=yellow     ctermfg=black
+hi Type       ctermfg=cyan
+hi User1      ctermbg=blue       cterm=inverse,bold
+hi User2      ctermbg=magenta    cterm=inverse,bold
 " gui
-hi Normal     guifg=#cccccc guibg=#002c2d
-hi Comment    guifg=salmon
-hi Constant   guifg=yellow
-hi Special    guifg=orchid
-hi Identifier guifg=orchid
-hi Statement  guifg=orchid
-hi PerProc    guifg=orchid
-hi Type       guifg=Orange
-hi Function   guifg=GoldenRod1
-hi Repeat     guifg=orchid
-hi Operator   guifg=red
-hi Ignore     guifg=white
-hi Error      guifg=black guibg=yellow gui=bold
-hi Todo       guifg=black guibg=yellow gui=bold
-hi Search     guifg=#002c2d guibg=#cccccc
-hi Cursor     guifg=white guibg=red
-hi CursorLine guibg=#002c2d
-hi Visual     guifg=white guibg=black
-hi Note       guifg=black guibg=yellow gui=bold
-hi NonText    guifg=grey50 gui=none
-hi User1      guibg=blue gui=inverse,bold
-hi User2      guibg=brown gui=inverse,bold
-hi LineNr     guifg=black guibg=khaki gui=bold
-hi CursorLineNr guifg=black guibg=Yellow
-hi SpecialKey guifg=grey50 gui=none
-hi PMenuSel  guibg=SeaGreen
+" hi Normal       guifg=#cccccc    guibg=#002c2d
+hi Comment      guifg=salmon
+hi Constant     guifg=yellow
+hi Cursor       guifg=white      guibg=red
+hi CursorLine   guibg=white      gui=underline
+hi CursorLineNr guifg=black      guibg=Yellow
+hi Error        guifg=black      guibg=yellow     gui=bold
+hi Function     guifg=GoldenRod1
+hi Identifier   guifg=orchid
+hi Ignore       guifg=white
+hi LineNr       guifg=black      guibg=khaki      gui=bold
+hi NonText      guifg=grey50     gui=none
+hi Note         guifg=black      guibg=yellow     gui=bold
+hi Operator     guifg=red
+hi PMenuSel     guibg=SeaGreen
+hi PreProc      guifg=orchid
+hi Repeat       guifg=orchid
+hi Search       guifg=#002c2d    guibg=#cccccc
+hi Special      guifg=orchid
+hi SpecialKey   guifg=grey50     gui=none
+hi Statement    guifg=orchid
+hi Todo         guifg=black      guibg=yellow     gui=bold
+hi Type         guifg=Orange
+hi User1        guibg=blue       gui=inverse,bold
+hi User2        guibg=brown      gui=inverse,bold
+hi Visual       guifg=white      guibg=black
 
 " Common groups that link to default highlighting.
 " You can specify other highlighting easily.
@@ -88,6 +88,6 @@ hi link Debug          Special
 hi link helpNote       Todo
 
 " Calndar
-hi CalSunday guifg=Red
-hi CalSaturday guifg=Cyan
-hi CalToday guifg=Yellow
+hi CalSunday guifg=red
+hi CalSaturday guifg=cyan
+hi CalToday guifg=yellow

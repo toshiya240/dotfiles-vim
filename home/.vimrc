@@ -28,7 +28,9 @@ set undodir=~/.vim/tmp/undo
 "----------------------------------------------------------------------
 " 画面表示関係
 "
-set t_Co=256
+" set termguicolors
+let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+let &t_8b = "\<Esc>[38:2:%lu:%lu:%lum"
 set nonumber
 augroup numberwidth
   autocmd!
