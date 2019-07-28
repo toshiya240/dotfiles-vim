@@ -26,16 +26,63 @@ nnoremap <silent><leader>s :<C-u>set spell!<CR>:set spell?<CR>
 " grep
 nnoremap <silent><leader>/ :grep <C-r><C-w><CR>
 
+"
+" like Spacemacs
+"
+
+" Openning and closing a window
+nnoremap <silent><leader>ws     <C-w>s
+nnoremap <silent><leader>wv     <C-w>v
+nnoremap <silent><leader>wn     <C-w>n
+nnoremap <silent><leader>wd     <C-w>c
+nnoremap <silent><leader>wc     <C-w>c
+nnoremap <silent><leader>wq     <C-w>q
+nnoremap <silent><leader>wo     <C-w>o
+" Moving cursor to other windows
+nnoremap <silent><leader>wj     <C-w>j
+nnoremap <silent><leader>wk     <C-w>k
+nnoremap <silent><leader>wh     <C-w>h
+nnoremap <silent><leader>wl     <C-w>l
+nnoremap <silent><leader>ww     <C-w><C-w>
+nnoremap <silent><leader>w<C-i> <C-w><C-w>
+nnoremap <silent><leader>wt     <C-w>t
+nnoremap <silent><leader>wb     <C-w>b
+nnoremap <silent><leader>wp     <C-w>p
+nnoremap <silent><leader>wP     <C-w>P
+" Moving windows arround
+nnoremap <silent><leader>wr     <C-w>r
+nnoremap <silent><leader>wR     <C-w>R
+nnoremap <silent><leader>wx     <C-w>x
+nnoremap <silent><leader>wJ     <C-w>J
+nnoremap <silent><leader>wK     <C-w>K
+nnoremap <silent><leader>wH     <C-w>H
+nnoremap <silent><leader>wL     <C-w>L
+nnoremap <silent><leader>wT     <C-w>T
+" Window resizing
+nnoremap <silent><leader>w-     <C-w>-
+nnoremap <silent><leader>w+     <C-w>+
+nnoremap <silent><leader>w_     <C-w>_
+nnoremap <silent><leader>w<     <C-w><
+nnoremap <silent><leader>w>     <C-w>>
+nnoremap <silent><leader>w<Bar> <C-w><Bar>
+" buffers
+nnoremap <silent><leader>bd     :<C-u>bd<CR>
+nnoremap <silent><leader>bn     :<C-u>bn<CR>
+nnoremap <silent><leader>bp     :<C-u>bp<CR>
+" files
+nnoremap <silent><leader>fj     :Explore<CR>
+nnoremap <leader>fJ     :Explore %:h<CR>
+
 if dein#tap('denite.nvim')
-  nnoremap <silent><leader>f :<C-u>Denite file -buffer-name=file<CR>
-  nnoremap <silent><leader>F :<C-u>Denite file -buffer-name=file -input=`expand('%:h')`/<CR>
-  nnoremap <silent><leader><space> :<C-u>Denite file/rec<CR>
-  nnoremap <silent><leader>b :<C-u>Denite buffer -buffer-name=buffer<CR>
+  nnoremap <silent><leader>ff :<C-u>Denite file -buffer-name=file<CR>
+  nnoremap <silent><leader>fF :<C-u>Denite file -buffer-name=file -input=`expand('%:h')`/<CR>
+  nnoremap <silent><leader>f<space> :<C-u>Denite file/rec<CR>
+  nnoremap <silent><leader>bb :<C-u>Denite buffer -buffer-name=buffer<CR>
   nnoremap <silent><leader>R :<C-u>Denite register -buffer-name=register<CR>
   nnoremap <silent><leader>k :<C-u>Denite bookmark -buffer-name=bookmark<CR>
   nnoremap <silent><leader>o :<C-u>Denite outline -buffer-name=outline<CR>
   if dein#tap('neomru.vim')
-    nnoremap <silent><leader>r :<C-u>Denite file_mru -buffer-name=file_mru<CR>
+    nnoremap <silent><leader>fr :<C-u>Denite file_mru -buffer-name=file_mru<CR>
   endif
 endif
 if dein#tap('unite.vim')
