@@ -70,8 +70,8 @@ nnoremap <silent><leader>bd     :<C-u>bd<CR>
 nnoremap <silent><leader>bn     :<C-u>bn<CR>
 nnoremap <silent><leader>bp     :<C-u>bp<CR>
 " files
-nnoremap <silent><leader>fj     :Explore<CR>
-nnoremap <leader>fJ     :Explore %:h<CR>
+nnoremap <silent><leader>fj     :Explore .<CR>
+nnoremap <silent><leader>fJ     :Explore<CR>
 
 if dein#tap('denite.nvim')
   nnoremap <silent><leader>ff :<C-u>Denite file -buffer-name=file<CR>
