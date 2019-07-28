@@ -48,3 +48,8 @@ hook_add = 'execute "source " . g:dein_base_dir . "/rc/syntastic.vim"'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+# misc
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/memolist.vim"'
