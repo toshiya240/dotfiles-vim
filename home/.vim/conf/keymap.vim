@@ -27,7 +27,7 @@ nnoremap <silent><leader>s :<C-u>set spell!<CR>:set spell?<CR>
 nnoremap <silent><leader>/ :grep <C-r><C-w><CR>
 
 "
-" like Spacemacs
+" like Spacemacs {{{
 "
 
 " Openning and closing a window
@@ -73,7 +73,9 @@ nnoremap <silent><leader>bp     :<C-u>bp<CR>
 nnoremap <silent><leader>fj     :Explore .<CR>
 nnoremap <silent><leader>fJ     :Explore<CR>
 
-if dein#tap('denite.nvim')
+" }}}
+
+if dein#tap('denite.nvim') " {{{
   nnoremap <silent><leader>ff :<C-u>Denite file -buffer-name=file<CR>
   nnoremap <silent><leader>fF :<C-u>Denite file -buffer-name=file -input=`expand('%:h')`/<CR>
   nnoremap <silent><leader>f<space> :<C-u>Denite file/rec<CR>
@@ -84,23 +86,24 @@ if dein#tap('denite.nvim')
   if dein#tap('neomru.vim')
     nnoremap <silent><leader>fr :<C-u>Denite file_mru -buffer-name=file_mru<CR>
   endif
-endif
-if dein#tap('unite.vim')
-  nnoremap <silent><leader>f :<C-u>Unite file -buffer-name=file<CR>
-  nnoremap <silent><leader>F :<C-u>Unite file -buffer-name=file -input=`expand('%:h')`/<CR>
-  nnoremap <silent><leader><space> :<C-u>Unite file_rec<CR>
-  nnoremap <silent><leader>b :<C-u>Unite buffer -buffer-name=buffer<CR>
+endif " }}}
+
+if dein#tap('unite.vim') " {{{
+  nnoremap <silent><leader>ff :<C-u>Unite file -buffer-name=file<CR>
+  nnoremap <silent><leader>fF :<C-u>Unite file -buffer-name=file -input=`expand('%:h')`/<CR>
+  nnoremap <silent><leader>f<space> :<C-u>Unite file_rec<CR>
+  nnoremap <silent><leader>bb :<C-u>Unite buffer -buffer-name=buffer<CR>
   nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
   nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
   if dein#tap('unite-outline')
     nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
   endif
   if dein#tap('neomru.vim')
-    nnoremap <silent><leader>r :<C-u>Unite file_mru -buffer-name=file_mru<CR>
+    nnoremap <silent><leader>fr :<C-u>Unite file_mru -buffer-name=file_mru<CR>
   endif
-endif
+endif " }}}
 
-if dein#tap('neocomplete')
+if dein#tap('neocomplete') " {{{
   inoremap <expr><C-g>     neocomplete#undo_completion()
   inoremap <expr><C-l>     neocomplete#complete_common_string()
 
@@ -122,9 +125,9 @@ if dein#tap('neocomplete')
   "" Close popup by <Space>.
   "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() :
   "\<Space>"
-endif
+endif " }}}
 
-if dein#tap('neosnippet')
+if dein#tap('neosnippet') " {{{
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)
   smap <C-k>     <Plug>(neosnippet_expand_or_jump)
   xmap <C-k>     <Plug>(neosnippet_expand_target)
@@ -136,4 +139,12 @@ if dein#tap('neosnippet')
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
   \ "\<Plug>(neosnippet_expand_or_jump)"
   \: "\<TAB>"
-endif
+endif " }}}
+
+if dein#tap('memolist.vim') " {{{
+  nnoremap <silent><leader>mn :<C-u>MemoNew<CR>
+  nnoremap <silent><leader>ml :<C-u>MemoList<CR>
+  nnoremap <silent><leader>mg :<C-u>MemoGrepPrg<CR>
+endif " }}}
+
+" vim: fdm=marker

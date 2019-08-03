@@ -84,6 +84,9 @@ set nowrapscan
 set ignorecase
 set smartcase
 
+" grep
+set grepprg=ag\ --nogroup\ -iSf
+autocmd QuickFixCmdPost *grep* cwindow
 " }}}
 
 "----------------------------------------------------------------------
@@ -122,11 +125,6 @@ set dictionary+=/usr/share/dict/connectives
 set helplang=en,ja
 set spelllang=en,cjk
 
-" grep
-set grepprg=ag\ --vimgrep\ $*
-set grepformat=%f:%l:%c:%m
-autocmd QuickFixCmdPost *grep* cwindow
-
 " man
 source $VIMRUNTIME/ftplugin/man.vim
 " autodate
@@ -138,7 +136,7 @@ function! OpenInMarked()
   silent !open -a Marked %:p
   redraw!
 endfunction
-map <leader>m :call OpenInMarked()<CR>
+map <leader>xm :call OpenInMarked()<CR>
 
 " Search Dash for word under cursor
 function! SearchDash()
@@ -149,7 +147,7 @@ function! SearchDash()
   execute s:cmd
   redraw!
 endfunction
-map <silent><leader>d :call SearchDash()<CR>
+map <silent><leader>xd :call SearchDash()<CR>
 
 " }}}
 
