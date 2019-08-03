@@ -7,6 +7,11 @@ repo = 'dag/vim-fish'
 on_ft = ['fish']
 
 [[plugins]]
+repo = 'habamax/vim-asciidoctor'
+on_ft = ['asciidoc']
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/asciidoctor.vim"'
+
+[[plugins]]
 repo = 'rcmdnk/vim-markdown'
 on_ft = ['markdown']
 hook_add = 'execute "source " . g:dein_base_dir . "/rc/markdown.vim"'
