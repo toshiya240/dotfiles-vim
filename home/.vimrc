@@ -10,23 +10,26 @@ endif
 let mapleader="\<Space>"
  
 "----------------------------------------------------------------------
-" 日本語を扱うために
+" 日本語を扱うために {{{
 "
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,cp932
 set iminsert=0
 set imsearch=0
 
+" }}}
 
 "----------------------------------------------------------------------
-" ファイル関連
+" ファイル関連 {{{
 set nobackup
 set swapfile
 set directory=~/.vim/tmp/swap//
 set undofile
 set undodir=~/.vim/tmp/undo
 
+" }}}
+
 "----------------------------------------------------------------------
-" 画面表示関係
+" 画面表示関係 {{{
 "
 if has('termguicolors')
   " set termguicolors
@@ -57,6 +60,13 @@ set listchars=tab:>-,space:.
 
 set hlsearch
 
+" folding {{{
+set foldmethod=indent
+set foldlevel=100
+set foldcolumn=5
+set foldtext=folding#foldtext()
+" }}}
+
 " Insert モードでカーソル形状変更
 if has('vim_starting')
   let &t_SI = "\e[6 q"
@@ -64,16 +74,20 @@ if has('vim_starting')
   let &t_SR = "\e[4 q"
 endif
 
+" }}}
+
 "----------------------------------------------------------------------
-" search
+" search {{{
 "
 set incsearch
 set nowrapscan
 set ignorecase
 set smartcase
 
+" }}}
+
 "----------------------------------------------------------------------
-" 編集関係
+" 編集関係 {{{
 "
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -100,8 +114,10 @@ augroup END
 set dictionary+=/usr/share/dict/words
 set dictionary+=/usr/share/dict/connectives
 
+" }}}
+
 "----------------------------------------------------------------------
-" misc
+" misc {{{
 
 set helplang=en,ja
 set spelllang=en,cjk
@@ -135,8 +151,10 @@ function! SearchDash()
 endfunction
 map <silent><leader>d :call SearchDash()<CR>
 
+" }}}
+
 "----------------------------------------------------------------------
-" dein
+" dein {{{
 if &compatible
   set nocompatible
 endif
@@ -164,6 +182,8 @@ if dein#check_install()
   call dein#install()
 endif
 
+" }}}
+
 " enable ftplugin
 filetype plugin on
 filetype indent on
@@ -173,3 +193,5 @@ runtime! conf/*.vim
 " syntax highlighting
 syntax on
 colorscheme mycolor
+
+" vim: fdm=marker
