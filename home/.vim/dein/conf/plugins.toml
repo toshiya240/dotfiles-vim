@@ -12,6 +12,12 @@ hook_add = 'execute "source " . g:dein_base_dir . "/rc/denite.vim"'
 depends = ['nvim-yarp', 'vim-hug-neovim-rpc']
 
 [[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
 repo = 'Shougo/neomru.vim'
 
 # status line
