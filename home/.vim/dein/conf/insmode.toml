@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 on_i = 1
-hook_add = 'execute "source " . g:dein_base_dir . "/rc/deoplete.vim"'
+hook_source = 'execute "source " . g:dein_base_dir . "/rc/deoplete.vim"'
 depends = ['nvim-yarp', 'vim-hug-neovim-rpc']
 
 [[plugins]]
