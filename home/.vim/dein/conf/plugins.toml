@@ -1,4 +1,7 @@
 [[plugins]]
+repo = 'lambdalisue/vim-pyenv'
+
+[[plugins]]
 repo = 'Shougo/vimproc'
 build = 'make'
 
