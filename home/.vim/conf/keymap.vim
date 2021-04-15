@@ -70,37 +70,22 @@ nnoremap <silent><leader>bd     :<C-u>bd<CR>
 nnoremap <silent><leader>bn     :<C-u>bn<CR>
 nnoremap <silent><leader>bp     :<C-u>bp<CR>
 " files
-nnoremap <silent><leader>fj     :Explore .<CR>
-nnoremap <silent><leader>fJ     :Explore<CR>
+nnoremap <silent><leader>fe     :Explore .<CR>
+nnoremap <silent><leader>fE     :Explore<CR>
 
 " }}}
 
-if dein#tap('denite.nvim') " {{{
-  nnoremap <silent><leader>ff :<C-u>Denite file -buffer-name=file<CR>
-  nnoremap <silent><leader>fF :<C-u>Denite file -buffer-name=file -input=`expand('%:h')`/<CR>
-  nnoremap <silent><leader>f<space> :<C-u>Denite file/rec<CR>
-  nnoremap <silent><leader>bb :<C-u>Denite buffer -buffer-name=buffer<CR>
-  nnoremap <silent><leader>R :<C-u>Denite register -buffer-name=register<CR>
-  nnoremap <silent><leader>k :<C-u>Denite bookmark -buffer-name=bookmark<CR>
-  nnoremap <silent><leader>o :<C-u>Denite outline -buffer-name=outline<CR>
-  if dein#tap('neomru.vim')
-    nnoremap <silent><leader>fr :<C-u>Denite file_mru -buffer-name=file_mru<CR>
-  endif
+if dein#tap('vim-clap') " {{{
+  nnoremap <silent><leader>bb :<C-u>Clap buffers<CR>
+  nnoremap <silent><leader>ff :<C-u>Clap files ++finder=find . -type f<CR>
+  nnoremap <silent><leader>fj :<C-u>Clap jumps<CR>
+  nnoremap <silent><leader>fl :<C-u>Clap loclist<CR>
+  nnoremap <silent><leader>fr :<C-u>Clap history<CR>
+  nnoremap <silent><leader>fq :<C-u>Clap quickfix<CR>
+  nnoremap <silent><leader>R  :<C-u>Clap registers<CR>
+  nnoremap <silent><leader>p  :<C-u>Clap yanks<CR>
 endif " }}}
 
-if dein#tap('unite.vim') " {{{
-  nnoremap <silent><leader>ff :<C-u>Unite file -buffer-name=file<CR>
-  nnoremap <silent><leader>fF :<C-u>Unite file -buffer-name=file -input=`expand('%:h')`/<CR>
-  nnoremap <silent><leader>f<space> :<C-u>Unite file_rec<CR>
-  nnoremap <silent><leader>bb :<C-u>Unite buffer -buffer-name=buffer<CR>
-  nnoremap <silent><leader>R :<C-u>Unite register -buffer-name=register<CR>
-  nnoremap <silent><leader>k :<C-u>Unite bookmark -buffer-name=bookmark<CR>
-  if dein#tap('unite-outline')
-    nnoremap <silent><leader>o :<C-u>Unite outline -buffer-name=outline<CR>
-  endif
-  if dein#tap('neomru.vim')
-    nnoremap <silent><leader>fr :<C-u>Unite file_mru -buffer-name=file_mru<CR>
-  endif
 endif " }}}
 
 if dein#tap('neocomplete') " {{{

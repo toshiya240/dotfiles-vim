@@ -1,14 +1,10 @@
 [[plugins]]
-repo = 'lambdalisue/vim-pyenv'
+repo = 'liuchengxu/vim-clap'
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/vim-clap.vim"'
 
 [[plugins]]
-repo = 'Shougo/vimproc'
-build = 'make'
 
-# Denite
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = 'execute "source " . g:dein_base_dir . "/rc/denite.vim"'
 depends = ['nvim-yarp', 'vim-hug-neovim-rpc']
 
 [[plugins]]

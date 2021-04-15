@@ -26,7 +26,8 @@ hi LineNr     ctermfg=yellow     cterm=bold
 hi NonText    ctermfg=grey
 hi Note       ctermfg=black      ctermbg=yellow     cterm=bold
 hi Operator   ctermfg=red
-hi PMenuSel   ctermfg=white      ctermbg=darkgreen  cterm=bold
+hi Pmenu      ctermfg=white      ctermbg=darkgray
+hi PmenuSel   ctermfg=white      ctermbg=darkgreen  cterm=bold
 hi PreProc    ctermfg=magenta
 hi Repeat     ctermfg=magenta
 hi Search     ctermfg=black      ctermbg=green
@@ -54,7 +55,8 @@ hi LineNr       guifg=black      guibg=khaki      gui=bold
 hi NonText      guifg=grey50     gui=none
 hi Note         guifg=black      guibg=yellow     gui=bold
 hi Operator     guifg=red
-hi PMenuSel     guibg=SeaGreen
+hi Pmenu        guifg=#cccccc    guibg=DarkGreen
+hi PmenuSel     guibg=SeaGreen
 hi PreProc      guifg=orchid
 hi Repeat       guifg=orchid
 hi Search       guifg=#002c2d    guibg=#cccccc
