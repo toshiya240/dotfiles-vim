@@ -26,7 +26,7 @@ hi LineNr     ctermfg=yellow     cterm=bold
 hi NonText    ctermfg=grey
 hi Note       ctermfg=black      ctermbg=yellow     cterm=bold
 hi Operator   ctermfg=red
-hi Pmenu      ctermfg=white      ctermbg=darkgray
+hi Pmenu      ctermfg=white      ctermbg=black
 hi PmenuSel   ctermfg=white      ctermbg=darkgreen  cterm=bold
 hi PreProc    ctermfg=magenta
 hi Repeat     ctermfg=magenta
@@ -61,13 +61,13 @@ hi PreProc      guifg=orchid
 hi Repeat       guifg=orchid
 hi Search       guifg=#002c2d    guibg=#cccccc
 hi Special      guifg=orchid
-hi SpecialKey   guifg=grey50     gui=none
+hi SpecialKey   guifg=DarkGreen  gui=none
 hi Statement    guifg=orchid
 hi Todo         guifg=black      guibg=yellow     gui=bold
 hi Type         guifg=Orange
 hi User1        guibg=blue       gui=inverse,bold
 hi User2        guibg=brown      gui=inverse,bold
-hi Visual       guifg=white      guibg=black
+hi Visual                        guibg=#cccccc
 " }}}
 
 " Common groups that link to default highlighting. {{{

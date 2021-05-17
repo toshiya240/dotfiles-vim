@@ -86,31 +86,16 @@ if dein#tap('vim-clap') " {{{
   nnoremap <silent><leader>p  :<C-u>Clap yanks<CR>
 endif " }}}
 
+if dein#tap('asyncomplete.vim') " {{{
+  inoremap <expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+  " completeopt に noinsert を指定しているので CR を選択項目の入力にする
+  " inoremap <expr><cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+  inoremap <expr><cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 endif " }}}
 
-if dein#tap('neocomplete') " {{{
-  inoremap <expr><C-g>     neocomplete#undo_completion()
-  inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-  "" Recommended key-mappings.
-  "" <CR>: close popup and save indent.
-  inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-  function! s:my_cr_function()
-      return neocomplete#close_popup() . "\<CR>"
-      " For no inserting <CR> key.
-      "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-  endfunction
-  "" <TAB>: completion.
-  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-  "" <C-h>, <BS>: close popup and delete backword char.
-  inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-  inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-  inoremap <expr><C-y>  neocomplete#close_popup()."\<C-y>"
-  inoremap <expr><C-e>  neocomplete#cancel_popup()."\<C-e>"
-  "" Close popup by <Space>.
-  "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() :
-  "\<Space>"
-endif " }}}
+if dein#tap('emmet-vim')
+  let g:user_emmet_leader_key = '<C-c>'
+endif
 
 if dein#tap('neosnippet') " {{{
   imap <C-k>     <Plug>(neosnippet_expand_or_jump)

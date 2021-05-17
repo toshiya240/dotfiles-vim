@@ -2,19 +2,30 @@
 repo = 'liuchengxu/vim-clap'
 hook_add = 'execute "source " . g:dein_base_dir . "/rc/vim-clap.vim"'
 
+# LSP
 [[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/vim-lsp.vim"'
 
 [[plugins]]
-depends = ['nvim-yarp', 'vim-hug-neovim-rpc']
+repo = 'mattn/vim-lsp-settings'
+
+# completion
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/asyncomplete.vim"'
 
 [[plugins]]
-repo = 'roxma/nvim-yarp'
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 [[plugins]]
-repo = 'roxma/vim-hug-neovim-rpc'
+repo = 'Shougo/neosnippet'
+on_i = 1
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/neosnippet.vim"'
 
 [[plugins]]
-repo = 'Shougo/neomru.vim'
+repo = 'prabirshrestha/asyncomplete-neosnippet.vim'
+hook_add = 'execute "source " . g:dein_base_dir . "/rc/asyncomplete-neosnippet.vim"'
 
 # status line
 [[plugins]]
@@ -42,11 +53,6 @@ repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'vim-scripts/Align'
-
-# devel
-[[plugins]]
-repo = 'scrooloose/syntastic'
-hook_add = 'execute "source " . g:dein_base_dir . "/rc/syntastic.vim"'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'

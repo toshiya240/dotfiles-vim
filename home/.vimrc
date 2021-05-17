@@ -56,6 +56,7 @@ set nowrap
 set display=lastline
 set linebreak
 set scrolloff=5
+set list
 set listchars=tab:>-,space:.
 
 set hlsearch
@@ -92,6 +93,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 "----------------------------------------------------------------------
 " 編集関係 {{{
 "
+set autoread
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set expandtab
@@ -102,6 +104,7 @@ set cinkeys=0{,0},0),:,0#,!<Tab>,o,O,e
 set cino=:0,l1,g0,N-s,E-s,t0,i2s,+2s,u2s,U1,m1
 
 set history=100
+set wildmenu
 
 set mouse=a
 set ttymouse=xterm2
