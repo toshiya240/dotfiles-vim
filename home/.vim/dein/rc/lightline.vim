@@ -22,8 +22,8 @@ let g:lightline.component_function = {
       \   'fileencoding': 'MyFileencoding',
       \   'mode': 'MyMode',
       \ }
-let g:lightline.separator    = { 'left': "\u2B80", 'right': "\u2B82" }
-let g:lightline.subseparator = { 'left': "\u2B81", 'right': "\u2B83" }
+let g:lightline.separator    = { 'left': "\ue0B0", 'right': "\ue0B2" }
+let g:lightline.subseparator = { 'left': "\ue0B1", 'right': "\ue0B3" }
 let g:lightline.mode_map = {
       \ 'n' : 'NML',
       \ 'c' : 'NML',
@@ -60,7 +60,7 @@ function! MyModified()
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? "\u2B64" : ''
+  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? "\uf023" : ''
 endfunction
 
 function! MyFilename()
@@ -77,7 +77,7 @@ endfunction
 
 function! MyTabFilename(n)
   let fn = lightline#tab#filename(a:n)
-  return WebDevIconsGetFileTypeSymbol(fn) . fn
+  return WebDevIconsGetFileTypeSymbol(fn) . ' ' . fn
 endfunction
 
 function! MyTagname()
@@ -85,9 +85,9 @@ function! MyTagname()
 endfunction
 
 function! MyFugitive()
-  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-    let _ = fugitive#head()
-    return strlen(_) ? "\u2B60 "._ : ''
+  if &ft !~? 'vimfiler\|gundo' && exists("*FugitiveHead")
+    let _ = FugitiveHead()
+    return strlen(_) ? "\ue702 "._ : ''
   endif
   return ''
 endfunction
@@ -100,7 +100,7 @@ endfunction
 function! MyFiletype()
   return winwidth(0) <= 70 ? '' :
         \ strlen(&filetype) == 0 ? 'no ft' :
-        \ WebDevIconsGetFileTypeSymbol() . &filetype
+        \ WebDevIconsGetFileTypeSymbol() . ' ' . &filetype
 endfunction
 
 function! MyFileencoding()

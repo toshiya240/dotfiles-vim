@@ -49,7 +49,7 @@ set laststatus=2		" show the status line all the time
 set showtabline=2
 set cmdheight=2
 set pumheight=10
-set ambiwidth=double    " for characters with East Asian Width Class Ambiguous
+set ambiwidth=single    " for characters with East Asian Width Class Ambiguous
 set showmatch			" 閉じ括弧が挿入されたときに、一瞬対応する括弧にジャンプする
 set matchtime=1
 set nowrap
