@@ -32,7 +32,7 @@ hi PreProc    ctermfg=magenta
 hi Repeat     ctermfg=magenta
 hi Search     ctermfg=black      ctermbg=green
 hi Special    ctermfg=magenta
-hi SpecialKey ctermfg=brown
+hi SpecialKey ctermfg=darkgray
 hi Statement  ctermfg=magenta
 hi Todo       ctermfg=black      ctermbg=yellow
 hi Type       ctermfg=cyan
