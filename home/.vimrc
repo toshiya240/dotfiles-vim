@@ -86,7 +86,13 @@ set ignorecase
 set smartcase
 
 " grep
-set grepprg=ag\ --nogroup\ -iSf
+if executable('ag')
+  set grepprg=ag\ --nogroup\ -iSf
+endif
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+  set grepformat=%f:%l:%c:%m
+endif
 autocmd QuickFixCmdPost *grep* cwindow
 " }}}
 
