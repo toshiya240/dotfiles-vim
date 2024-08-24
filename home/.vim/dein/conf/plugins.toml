@@ -1,6 +1,7 @@
 [[plugins]]
 repo = 'liuchengxu/vim-clap'
 hook_add = 'execute "source " . g:dein_base_dir . "/rc/vim-clap.vim"'
+build = 'cargo build --release'
 
 # LSP
 [[plugins]]
